@@ -1,6 +1,7 @@
 package br.com.caelum.loja.session;
 
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.ejb.Remote;
@@ -42,7 +43,9 @@ public class GerenciadorLojaBean implements GerenciadorLoja {
 	
 	@Override
 	public Livro procura(Long id) {
-		return this.manager.find(Livro.class, id);
+		Livro livro = this.manager.find(Livro.class, id);
+		livro.getAutores().size();
+		return livro;
 	}
 
 	@Override
@@ -57,6 +60,13 @@ public class GerenciadorLojaBean implements GerenciadorLoja {
 		this.manager.persist(autor);
 		System.out.println("Livro salvo! ID: " + autor.getId());
 		return autor;
+	}
+
+	@Override
+	public List<Autor> getAutoresDoLivro(Livro livro) {
+		Livro l = procura(livro.getId());
+		l.getAutores().size();
+		return l.getAutores();
 	}
 
 }
