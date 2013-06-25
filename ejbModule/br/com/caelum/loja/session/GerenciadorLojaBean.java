@@ -3,12 +3,16 @@ package br.com.caelum.loja.session;
 import java.util.HashMap;
 import java.util.Map;
 
+import javax.ejb.Remote;
+import javax.ejb.Stateless;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 
 import br.com.caelum.loja.entity.Livro;
 
-public class GerenciadorLojaBean implements GerenciadorLoja{
+@Stateless
+@Remote(GerenciadorLoja.class)
+public class GerenciadorLojaBean implements GerenciadorLoja {
 
 	@PersistenceContext
 	private EntityManager manager;
