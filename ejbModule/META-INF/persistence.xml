@@ -10,7 +10,7 @@
 
 		<properties>
 			<property name="hibernate.dialect" value="org.hibernate.dialect.MySQL5InnoDBDialect" />
-			<property name="hibernate.hbm2dll.auto" value="update" />
+			<property name="hibernate.hbm2dll.auto" value="create-drop" />
 			<property name="hibernate.show_sql" value="true" />
 		</properties>
 
