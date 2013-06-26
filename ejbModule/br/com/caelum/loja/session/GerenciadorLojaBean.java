@@ -17,7 +17,7 @@ import javax.transaction.UserTransaction;
 import br.com.caelum.loja.entity.Autor;
 import br.com.caelum.loja.entity.Livro;
 
-@TransactionManagement(TransactionManagementType.BEAN)
+//@TransactionManagement(TransactionManagementType.BEAN)
 @Stateless
 @Remote(GerenciadorLoja.class)
 public class GerenciadorLojaBean implements GerenciadorLoja {
