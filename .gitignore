@@ -4,4 +4,4 @@
 *.ear
 .project
 .settings/*
-.classpath
+*.class*
