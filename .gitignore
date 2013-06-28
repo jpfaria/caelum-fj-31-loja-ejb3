@@ -2,4 +2,7 @@
 *.jar
 *.war
 *.ear
-.*
+build/**
+.classpath
+.settings/**
+.project
