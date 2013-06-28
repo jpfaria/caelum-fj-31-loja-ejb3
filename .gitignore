@@ -2,6 +2,4 @@
 *.jar
 *.war
 *.ear
-.project
-.settings/*
-*.class*
+.*
