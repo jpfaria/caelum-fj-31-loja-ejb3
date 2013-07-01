@@ -52,9 +52,8 @@ public class GerenciadorLojaBean implements GerenciadorLoja {
 	@Override
 	public Livro procura(Long id) {
 		Livro livro = this.manager.find(Livro.class, id);
-		if (livro != null) {
-			livro.getAutores().size();
-		}
+		if (livro != null)
+		livro.getAutores().size();
 		return livro;
 	}
 
@@ -106,9 +105,8 @@ public class GerenciadorLojaBean implements GerenciadorLoja {
 	@Override
 	public List<Autor> getAutoresDoLivro(Livro livro) {
 		Livro l = procura(livro.getId());
-		if (livro != null) {
-			l.getAutores().size();
-		}
+		if (livro != null)
+		l.getAutores().size();
 		return l.getAutores();
 	}
 
