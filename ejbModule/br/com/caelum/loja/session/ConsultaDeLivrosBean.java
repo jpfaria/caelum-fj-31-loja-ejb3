@@ -19,7 +19,7 @@ import br.com.caelum.loja.ws.ConsultaDeLivros;
 @Remote(ConsultaDeLivros.class)
 public class ConsultaDeLivrosBean implements ConsultaDeLivros{
 
-	@PersistenceContext
+	@PersistenceContext(name="loja")
 	private EntityManager manager;
 	
 	@Override
